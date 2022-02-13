@@ -1,0 +1,120 @@
+.intro{
+    display: flex;
+    height: 100vh;
+}
+
+.intro-left{
+    flex: 1618;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.intro-right{
+    flex: 1000;
+    position: relative;
+    justify-content: right;
+}
+
+.intro-left-container{
+    padding: 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-intro{
+    font-size: 30px;
+    font-weight: 300;
+
+}
+
+.intro-name{
+    font-size: 60px;
+    /* font-weight: 500; */
+}
+
+.intro-slider{
+    height: 50px;
+    overflow: hidden;
+}
+
+.intro-slider-slide{
+    height: 50px;
+    font-size: 30px;
+    color: darkblue;
+    display: flex;
+    align-items: center;
+}
+
+.intro-slider-container{
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+
+@keyframes move{
+    33%{
+        transform: translateY(-50px);
+    }
+    67%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(-150px);
+    }
+}
+
+.intro-background{
+    clip-path: polygon(26% 0, 100% 0, 100% 35%, 100% 70%, 100% 100%, 26% 100%, 13% 79%, 4% 62%, 4% 39%, 13% 21%);
+    background-color: darkblue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -3;
+}
+
+.intro-img{
+    /* position: absolute; */
+    /* right: 0; */
+    object-fit: cover;
+    height: 100%;
+    width: 70%;
+    z-index: -2;
+}
+
+.img-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* background-color: brown; */
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media screen and (max-width:480px){
+    .img-container{
+        /* position: absolute;
+        bottom: 0;
+        align-items: center;
+        /* object-fit: contain; */
+        /* height: 100px ; */
+        /* height: 65px;
+        width: 44px; */ 
+        display: none;
+    }
+    .intro-slider{
+        display: none;
+    }
+    .intro-intro{
+        font-size: large;
+    }
+    .intro-name{
+        font-size: x-large;
+    }
+    .intro-description{
+        font-size:small;
+    }
+}
