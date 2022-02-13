@@ -59,7 +59,7 @@ const Contact = () => {
                         {/* <br></br> */}
                     </div>
                     <div className="contact-info-name">
-                        <div className="switch"><img src={Address} alt="" className="contact-icon"></img></div>
+                    <img src={Address} alt="" className="contact-icon"></img>
                         <div className="monke"><p>Koc University West Campus, Sariyer, Istanbul.</p></div>
                         
                         {/* <br></br> */}
